@@ -109,7 +109,8 @@ set LPORT 1122
 ```
 exploit
 ```
-![image](https://github.com/user-attachments/assets/a64c6f81-6cb5-4165-b31a-df5596942e91)
+![image](https://github.com/user-attachments/assets/032345ea-98a9-4b3b-8734-45d351c059a9)
+
 
 ### 7. Payload Delivery and Execution
 
@@ -132,9 +133,8 @@ Click `plague.exe` to download the payload onto the target system and run the pa
 ### 8. Session Confirmation and Control
 
 Upon successful execution of the `plague.exe` payload on the Windows 11 target, a **Meterpreter session** is established on the attacking Kali Linux machine. Control has now been established - granting command-line interface (CLI) and system access to the target machine.
-![image](https://github.com/user-attachments/assets/3c43b6af-7323-4b31-8854-af4a4dc9962e)
-![image](https://github.com/user-attachments/assets/a3ca6fae-0465-4ebb-86ce-13277fceebc7)
-![image](https://github.com/user-attachments/assets/4756c891-3ae8-421e-9be6-f8e0548129b2)
+![image](https://github.com/user-attachments/assets/170f1f21-fe83-4cd5-8ce9-df2538fc87e1)
+
 
 
 
